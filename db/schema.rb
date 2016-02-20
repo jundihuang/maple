@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 20160218145458) do
     t.string   "title"
     t.string   "subtitle"
     t.text     "body"
-    t.datetime "create_time"
-    t.datetime "update_time"
     t.integer  "special_id"
     t.integer  "classification_id"
     t.datetime "created_at",        null: false

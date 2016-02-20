@@ -4,8 +4,6 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :subtitle
       t.text :body
-      t.datetime :create_time
-      t.datetime :update_time
       t.references :special
       t.references :classification
 
