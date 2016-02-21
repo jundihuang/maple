@@ -1,6 +1,0 @@
-# Maple 博客系统
-
-1. 开发环境:
-  - Emacs
-  - Ruby2.3 + Ruby On Rails4.2
-  
