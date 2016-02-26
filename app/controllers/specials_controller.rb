@@ -17,7 +17,6 @@ class SpecialsController < ApplicationController
   end
 
   def show
-    @special = Special.find(params[:id])
   end
 
   def special_params

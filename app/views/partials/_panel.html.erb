@@ -1,0 +1,16 @@
+<div class="panel panel-default" id="article-list">
+  <div class="banner">
+    <h3>Lastest Chapter</h3>
+  </div>
+  <div class="panel-body article-list">
+    <% if !@articles.none? %>
+    <% @articles.each do |article| %>
+    <h3><%= link_to article.title, article_path(article) %></h3>
+    <p><%= article.created_at %></p>
+    <% end %>
+    <% else %>
+    <h1>No Pages are available.</h1>
+    <% end %>
+  </div>
+</div>
+
