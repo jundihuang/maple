@@ -1,0 +1,1 @@
+AdminUser.create!(email:"maple@admin.com",password:"mapleadmin")
