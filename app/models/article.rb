@@ -1,8 +1,8 @@
 # coding: utf-8
 # 文章
 class Article < ActiveRecord::Base
-  has_many :specials
-  has_many :classifications
+  belongs_to :special
+  belongs_to :classification
   validates :title,
             presence: true,
             length: { minimum: 5},
@@ -10,6 +10,7 @@ class Article < ActiveRecord::Base
   validates :body,
             presence: true,
             length: { minimum: 20}
-  validates_associated :specials
-  validates_associated :classifications
+  validates_associated :special
+  validates_associated :classification
+  
 end
