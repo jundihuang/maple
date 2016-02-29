@@ -1,11 +1,7 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+<% content_for :panel do %>
+<%= render "articles/panel", object: @article %>
+<% end %>
 
-<%= link_to "Back", articles_path %>
-
+<% content_for :classification do %>
+<%= render "classifications/classification", collection: @classifications %>
+<% end %>

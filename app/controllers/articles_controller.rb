@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    @classifications = Classification.all
   end
 
   def new
@@ -18,11 +19,12 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @classifications = Classification.all
   end
 
 
   private
   def article_params
-    params.require(:article).permit(:title, :body, :subtitle)
+    params.require(:article).permit(:title, :subtitle, :classification_id, :body)
   end
 end

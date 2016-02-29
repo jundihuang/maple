@@ -1,0 +1,27 @@
+body{
+  background: #E8E8E8;
+}
+
+.navbar{
+  background-color: rgba(256,256,256,0.7);
+}
+
+.container-fluid .navbar-header{
+  margin-left: 40px;
+}
+
+.navbar-nav>li>a{
+  font-size: 18px;
+  font-weight:bold;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: #CF4D35;
+  border-left: 1px solid #F0F0F0;
+  border-right: 1px solid #F0F0F0;
+  background: white;
+}
+
+.container{
+  margin-top: 50px;
+}

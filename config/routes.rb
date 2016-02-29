@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,7 +10,10 @@ Rails.application.routes.draw do
   resources :specials
   resources :classifications
   # root 'welcome#index'
-  
+
+  # custom url
+  get '/', to: 'home#index', as: 'home_page'
+  get '/articles/classification/:id', to: 'home#show_articles_by_classification', as: 'articles_by_classification'  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

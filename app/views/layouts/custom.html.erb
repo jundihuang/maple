@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Maple</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <%= stylesheet_link_tag "css/bootstrap.min.css", "css/content.css", "css/navbar.css", "css/sidebar.css" %>
+    <%= yield :stylesheet %>
+
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render "partials/navbar" %>
+    <%= yield %>
+
+    <section class="container">
+      <section class="col-sm-9 page-content">
+	<%= yield :panel %>
+      </section>
+
+      <aside class="col-sm-3 age-index">
+	<%= yield :classification %>
+      </aside>
+    </section>
+
+
+    <%= javascript_include_tag "js/jquery-1.11.3.min.js", "js/bootstrap.min.js", "js/navbar/navbar.js" %>
+    <%= yield :javascript %>
+  </body>
+
+  
+</html>
