@@ -1,9 +1,4 @@
 class ArticlesController < ApplicationController
-  def index
-    @articles = Article.all
-    @classifications = Classification.all
-  end
-
   def new
 
   end

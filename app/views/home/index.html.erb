@@ -1,5 +1,15 @@
 <% content_for :panel do %>
-<%= render "partials/panel", collection: @articles %>
+<div class="panel panel-default" id="article-list">
+  <div class="banner">
+    <h3>Lastest Chapter</h3>
+  </div>
+  <div class="panel-body article-list">
+       <ul>
+        <%= render "partials/articles", collection: @articles %>
+      </ul>
+    <%= will_paginate @articles%>
+  </div>
+</div>
 <% end %>
 
 <% content_for :classification do %>

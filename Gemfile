@@ -8,9 +8,15 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+# ActiveAdmin uses Kaminari for its pagination which conflicts with will_paginate.
+# https://github.com/activeadmin/activeadmin/blob/master/docs/0-installation.md#will_paginate
+# Use ActiveAdmin
 gem 'activeadmin',github: 'activeadmin'
-
 gem 'devise'
+
+# User will_paginate
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
