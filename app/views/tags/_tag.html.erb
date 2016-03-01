@@ -1,0 +1,15 @@
+<div style="text-align: justify">
+  <ul class="tagcloud" style="background-color: white; padding: 20px;">
+    <% if !@tags.none? %>
+    <% @tags.each do |tag| %>
+      <li>
+      <label class="label" style ="background-color:<%= @word_color_list.pop %>">
+          <a href="<%= articles_by_tag_path(tag.id) %>" style="font-family:Helvetica;color:#ffffff;title=<%= tag.name %>">
+  	      <%= tag.name %></a>
+      </label>
+      </li>
+    <br />
+    <% end %>
+    <% end %>
+  </ul>
+</div>

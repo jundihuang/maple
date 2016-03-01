@@ -1,6 +1,6 @@
 ActiveAdmin.register Article do
   menu parent: "Blog", label: "Article"
-  permit_params :title, :body, :subtitle, :special_id, :classification_id
+  permit_params :title, :body, :subtitle, :special_id, :classification_id, :tag_list
   
   index do 
     column :title
@@ -9,6 +9,7 @@ ActiveAdmin.register Article do
     column :classification
     column :created_at
     column :updated_at
+    column :tag_list
     actions
   end
   
@@ -21,6 +22,7 @@ ActiveAdmin.register Article do
       f.input :body
       f.input :special
       f.input :classification
+      f.input :tag_list
     end
     f.actions
   end

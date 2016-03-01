@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/', to: 'home#index', as: 'home_page'
   get '/articles/classification/:id', to: 'articles#show_articles_by_classification', as: 'articles_by_classification'
   get '/articles/special/:id', to: 'articles#show_articles_by_special', as: 'articles_by_special'
+  get '/articles/tag/:id', to: 'articles#show_articles_by_tag', as: 'articles_by_tag'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

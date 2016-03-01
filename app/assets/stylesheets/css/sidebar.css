@@ -26,3 +26,25 @@
 .classification-content h4 a:hover{
   color: black;
 }
+
+.tagcloud {
+    font-weight: bolder;
+    line-height: 1.4em;
+}
+
+.tagcloud li {
+    display: inline-flex;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.tagcloud li a {
+    padding: 0 0.2em 0 0.2em;
+    text-decoration: none;
+}
+
+.tag-container {
+    margin-top: 20px;
+}
+

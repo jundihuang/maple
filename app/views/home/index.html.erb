@@ -16,3 +16,6 @@
 <%= render "classifications/classification", collection: @classifications %>
 <% end %>
 
+<% content_for :tag do %>
+<%= render "tags/tag", collection: @tags %>
+<% end %>

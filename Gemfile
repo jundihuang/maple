@@ -14,9 +14,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'activeadmin',github: 'activeadmin'
 gem 'devise'
 
-# User will_paginate
+# Use will_paginate
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
+
+# Use acts-as-taggable
+gem 'acts-as-taggable-on', '~> 3.4'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
