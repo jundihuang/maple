@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   # custom url
   get '/', to: 'home#index', as: 'home_page'
-  get '/articles/classification/:id', to: 'home#show_articles_by_classification', as: 'articles_by_classification'  
+  get '/articles/classification/:id', to: 'articles#show_articles_by_classification', as: 'articles_by_classification'
+  get '/articles/special/:id', to: 'articles#show_articles_by_special', as: 'articles_by_special'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
