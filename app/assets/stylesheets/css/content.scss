@@ -1,52 +1,46 @@
 .banner{
   background: white;
-  border-top: 1px solid #CF4D35;
-  box-shadow: 0px 3px 5px black;
+  box-shadow: 0px 3px 5px #E9E9E9;
   vertical-align: middle;
-}
-
-.banner h3{
+  h3{
   margin-top: 0px;
   padding: 12px 0px;
   text-align: center;
+  }
 }
 
 .article-list h3 a{
   color: #CF4D35;
-  text-decoration: none; 
-}
-
-.article-list h3 a:hover{
+  text-decoration: none;
+  &:hover{
   color: black;
+  }
 }
 
 .pagination{
   display: block;
   text-align: center;
-}
-
-.pagination a{
+  a{
   color: #CF4D35;
+  }
 }
 
-
-.special-list .special-cube{
+.special-list{
+  .special-cube{
   border: 1px solid black;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.special-list a{
+  }
+  a{
   font-size: 40px;
   color: #CF4d35;
   text-decoration: none;   
-}
-
-.special-list a:hover{
-  color: black;
-}
-
+  &:hover{
+    color: black;
+    }
+  }
+} 
 
 .article-content{
   padding: 30px 50px;
