@@ -2,8 +2,20 @@
 
 one:
   title: MyString
-  text: MyText
-
+  subtitle: testone
+  body: this is a test article, this is a test article, this is a test article, this is a test article
+  tags: awesome, slick, hefty
 two:
-  title: MyString
-  text: MyText
+  title: MyString1
+  subtitle: testtwo
+  body: this is a test article, this is a test article, this is a test article, this is a test article
+  tags: awesome, slick, hefty
+<% 60.times do |n| %>
+article_<%= n%>: 
+  title: <%="mysql #{n}"%>
+  subtitle: testmysql
+  body: myslql test,myslql testmyslql test,myslql testmyslql test,myslql testmyslql test,myslql testmyslql test,myslql test
+  classification: clsone
+  special: speone
+  tags: awesome, slick, hefty
+<% end %>

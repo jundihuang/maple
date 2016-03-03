@@ -49,6 +49,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :test do
+  # minitest 测试时显示红色和绿色
+  gem 'minitest-reporters', '1.0.5'
+  # 显示调用跟踪
+  gem 'mini_backtrace', '0.1.3'
+  # 自动测试
+  gem 'guard-minitest', '2.3.1'
+
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
