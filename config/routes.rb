@@ -6,13 +6,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :articles
-  resources :specials
-  resources :classifications
-  # root 'welcome#index'
+  resources :articles, only: [:show]
+ # resources :specials
+ # resources :classifications
 
   # custom url
-  get '/', to: 'home#index', as: 'home_page'
+  root 'home#index'
   get '/articles/classification/:id', to: 'articles#show_articles_by_classification', as: 'articles_by_classification'
   get '/articles/special/:id', to: 'articles#show_articles_by_special', as: 'articles_by_special'
   get '/articles/tag/:id', to: 'articles#show_articles_by_tag', as: 'articles_by_tag'

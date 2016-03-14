@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+clsone:
   title: MyString
-  article: 
 
-two:
-  title: MyString
-  article: 
+clstwo:
+  title: MyString1
