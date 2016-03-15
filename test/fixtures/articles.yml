@@ -11,7 +11,7 @@ two:
   body: this is a test article, this is a test article, this is a test article, this is a test article
   tags: awesome, slick, hefty
 <% 60.times do |n| %>
-article_<%= n%>: 
+article_<%= n%>:
   title: <%="mysql #{n}"%>
   subtitle: testmysql
   body: myslql test,myslql testmyslql test,myslql testmyslql test,myslql testmyslql test,myslql testmyslql test,myslql test
