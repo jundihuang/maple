@@ -4,3 +4,7 @@
    $(this).addClass('active');
    });
    }); */
+
+
+$(".prev a").text("<<");
+$(".next a").text(">>");

@@ -35,12 +35,12 @@
   a{
   font-size: 40px;
   color: #CF4d35;
-  text-decoration: none;   
+  text-decoration: none;
   &:hover{
     color: black;
     }
   }
-} 
+}
 
 .article-content{
   padding: 30px 50px;
@@ -50,3 +50,29 @@
     min-height: 670px;
     margin-top: 30px;
 }
+
+.pagination>li>a,
+.pagination>li>span {
+    color: #CF4D35;
+    font-size: 11px;
+}
+
+.pagination>li>a:hover{
+    color: black;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus{
+    color: black;
+    background: #CF4D35;
+    border: 1px solid #CF4D35;
+}
+
+div.pagination{
+    margin-top: 50px;
+}
+
