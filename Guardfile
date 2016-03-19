@@ -40,6 +40,11 @@ guard :minitest do
   # watch(%r{^app/helpers/(.*)\.rb$})     { |m| "test/helpers/#{m[1]}_test.rb" }
   # watch(%r{^app/models/(.*)\.rb$})      { |m| "test/unit/#{m[1]}_test.rb" }
   watch('config/routes.rb') { integration_tests }
+
+
+  watch(%r{^app/temp/(.*?)\.rb$}) do |matches|
+  "test/temp/#{matches[1]}_test.rb"
+  end
   watch(%r{^app/models/(.*?)\.rb$}) do |matches|
   "test/models/#{matches[1]}_test.rb"
   end

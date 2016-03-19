@@ -42,4 +42,5 @@ class ApplicationController < ActionController::Base
     end
     randoms
   end
+
 end

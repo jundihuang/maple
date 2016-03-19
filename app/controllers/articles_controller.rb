@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
     tag = ActsAsTaggableOn::Tag.find_by(id: params[:id])
     @articles = Article.tagged_with(tag.name).paginate(page: params[:page],per_page: 20).order("id DESC")
     render 'home/index'
-  end    
+  end
 
   private
   def article_params
@@ -46,4 +46,5 @@ class ArticlesController < ApplicationController
   def markdown
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
   end
+
 end

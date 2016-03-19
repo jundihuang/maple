@@ -19,3 +19,6 @@
 /spring-1000/*
 # Ignore Emacs Backup
 *~
+
+# File upload
+/public/uploads
