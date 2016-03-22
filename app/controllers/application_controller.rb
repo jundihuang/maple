@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def get_all_used_tags
     @tags = ActsAsTaggableOn::Tag.all
     #  根据@tags的长度产生对应的随机数
-    @word_color_lissst = rand_color(@tags.size)
+    @word_color_list = rand_color(@tags.size)
   end
 
   private

@@ -1,21 +1,11 @@
 <% content_for :panel do %>
-<div class="panel panel-default" id="article-list">
-  <div class="banner">
-    <h3>Lastest Chapter</h3>
-  </div>
-  <div class="panel-body article-list">
-       <ul>
-        <%= render "partials/articles", collection: @articles %>
-      </ul>
-    <%= will_paginate @articles %>
-  </div>
-</div>
+    <%= render "partials/articles" %>
 <% end %>
 
 <% content_for :classification do %>
-<%= render "classifications/classification", collection: @clsifications %>
+    <%= render "partials/classifications" %>
 <% end %>
 
 <% content_for :tag do %>
-<%= render "tags/tag", collection: @tags %>
+    <%= render "tags/tag"%>
 <% end %>

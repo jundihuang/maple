@@ -18,7 +18,7 @@ GIT
       sprockets (< 4)
 
 GEM
-  remote: https://ruby.taobao.org/
+  remote: https://gems.ruby-china.org/
   specs:
     actionmailer (4.2.5.1)
       actionpack (= 4.2.5.1)

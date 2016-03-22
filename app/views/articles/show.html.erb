@@ -1,9 +1,9 @@
 <% content_for :panel do %>
-<%= render "articles/article", object: @article %>
+<%= render @article %>
 <% end %>
 
 <% content_for :classification do %>
-<%= render "classifications/classification", collection: @classifications %>
+<%= render "partials/classifications" %>
 <% end %>
 
 <% content_for :tag do %>

@@ -1,12 +1,21 @@
-<% if @articles.any? %>
-  <% @articles.each do |article| %>
-    <li>
-      <h3><%= link_to article.title, article_path(article) %></h3>
-      <p><%= article.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
-      <% end %>
-      <% else %>
-    <h1>No Pages are available.</h1>
-  </li>
-<% end %>
-
+<div class="panel panel-default" id="article-list">
+  <div class="banner">
+    <h3>Lastest Chapter</h3>
+  </div>
+  <div class="panel-body article-list">
+       <ul>
+        <% if @articles.any? %>
+          <% @articles.each do |article| %>
+            <li>
+              <h3><%= link_to article.title, article_path(article) %></h3>
+              <p><%= article.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+          <% end %>
+        <% else %>
+            <h1>No Pages are available.</h1>
+           </li>
+        <% end %>
+      </ul>
+    <%= will_paginate @articles %>
+  </div>
+</div>
 

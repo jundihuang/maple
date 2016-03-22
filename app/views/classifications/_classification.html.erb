@@ -1,13 +1,1 @@
-<div class="sidebar-classification">
-    <div class="classification-title">
-      <h4>classification</h4>
-    </div>
-    <div class="classification-content">
-      <% if @clsifications.any? %>
-        <% @clsifications.each do |classification| %>
-          <h4><a href="<%= classification_path(classification) %>"><%= classification.title %></a></h4>
-        <% end %>
-      <% end %>
-    </div>
-</div>
-
+<h4><a href="<%= classification_path(classification) %>"><%= classification.title %></a></h4>
