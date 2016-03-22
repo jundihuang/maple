@@ -13,4 +13,28 @@ class Article < ActiveRecord::Base
   acts_as_taggable
   validates_associated :special
   validates_associated :classification
+
+  extend FriendlyId
+
+  friendly_id :title, use: [:slugged, :finders, :history]
+
+  #override 
+  def normalize_friendly_id(text)
+    "#{PinYin.of_string(text).to_s.to_slug.normalize.to_s}"
+  end
+
+  #override  title更新时更新slug
+  def should_generate_new_friendly_id?
+    title_changed? || super
+  end
+
+  ActsAsTaggableOn::Tag.class_eval do
+    extend FriendlyId
+    friendly_id :name, use: [:slugged, :finders]
+    
+    #override 
+    def normalize_friendly_id(text)
+      "#{PinYin.of_string(text).to_s.to_slug.normalize.to_s}"
+    end
+  end
 end

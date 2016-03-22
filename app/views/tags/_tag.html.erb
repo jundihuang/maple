@@ -4,7 +4,7 @@
     <% @tags.each do |tag| %>
       <li>
       <label class="label label-success">
-          <a href="<%= articles_by_tag_path(tag.id) %>"><%= tag.name %>
+          <a href="<%= tag_path(tag) %>"><%= tag.name %>
           <span class="badge"><%= tag.taggings_count %></span>
           </a>
       </label>

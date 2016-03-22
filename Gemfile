@@ -21,6 +21,11 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # Use acts-as-taggable
 gem 'acts-as-taggable-on', '~> 3.4'
 
+# Friendly_id
+gem 'friendly_id','5.1.0'
+gem 'ruby-pinyin', '0.4.6'
+gem 'babosa'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for . assets and views

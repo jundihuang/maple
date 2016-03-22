@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301111506) do
+ActiveRecord::Schema.define(version: 20160322031228) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -54,19 +54,41 @@ ActiveRecord::Schema.define(version: 20160301111506) do
     t.integer  "classification_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "slug"
   end
+
+  add_index "articles", ["slug"], name: "index_articles_on_slug"
 
   create_table "classifications", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "classifications", ["slug"], name: "index_classifications_on_slug"
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
   create_table "specials", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "specials", ["slug"], name: "index_specials_on_slug"
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -84,8 +106,10 @@ ActiveRecord::Schema.define(version: 20160301111506) do
   create_table "tags", force: :cascade do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
+    t.string  "slug"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+  add_index "tags", ["slug"], name: "index_tags_on_slug"
 
 end

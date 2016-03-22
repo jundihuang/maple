@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'set'
 class ApplicationController < ActionController::Base
-
+  before_filter :get_classifications, :get_specials, :get_all_used_tags
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -9,18 +9,17 @@ class ApplicationController < ActionController::Base
 
   # 每个页面几乎都会加载的数据，在这里获取。
   def get_classifications
-    @classifications = Classification.all
+    @clsifications = Classification.all
   end
 
   def get_specials
-    @specials = Special.all
+    @spcials = Special.all
   end
 
   def get_all_used_tags
     @tags = ActsAsTaggableOn::Tag.all
     #  根据@tags的长度产生对应的随机数
-    #@word_size_list = rand_number(@tags.size, 8, 20)
-    @word_color_list = rand_color(@tags.size)
+    @word_color_lissst = rand_color(@tags.size)
   end
 
   private
