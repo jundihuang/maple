@@ -1,5 +1,5 @@
 ActiveAdmin.register Classification do
- menu parent: "Blog", label: "Classification"
+ menu parent: I18n.t("Blog"), label: I18n.t("Classification")
 
  permit_params :title
 

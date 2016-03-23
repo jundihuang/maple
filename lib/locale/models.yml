@@ -1,0 +1,47 @@
+zh-CN:
+  activerecord:
+    models:
+      article: 文章
+      special: 专题
+      classification: 分类
+      comment: 评论
+      admin_user: 用户管理
+      admin: 管理页面
+    attributes:
+      article:
+        title: 标题
+        subtitle: 副标题
+        special: 专题
+        special_id: 专题
+        classification_id: 分类
+        classification: 分类
+        created_at: 创建时间
+        updated_at: 修改时间
+        tag_list: 标签列表
+        base_tags: 标签
+        slug: 个性化url
+        slugs: 所有个性化url
+        body: 文章内容
+      special:
+        title: 题目
+        created_at: 创建时间
+        updated_at: 修改时间
+        slug: 个性化url
+      classification:
+        title: 题目
+        created_at: 创建时间
+        updated_at: 修改时间
+        slug: 个性化url
+      admin_user:
+        email: 电子邮箱
+        current_sign_in_ip: 当前登录ip
+        last_sign_in_ip: 上一次登录ip
+        current_sign_in_at: 当前登录时间
+        last_sign_in_at: 上一次登录时间
+        sign_in_count: 登录数量
+        created_at: 创建时间
+        updated_at: 修改时间
+        encrypted_password: 密码
+        reset_password_token: 重置密码token
+        reset_password_sent_at: 重置密码发送于
+        remember_created_at: 记忆创建于
