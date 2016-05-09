@@ -2,6 +2,7 @@
 require 'set'
 class ApplicationController < ActionController::Base
   before_filter :get_classifications, :get_specials, :get_all_used_tags
+  before_action :set_locale
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -22,8 +23,11 @@ class ApplicationController < ActionController::Base
     @word_color_list = rand_color(@tags.size)
   end
 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
   private
-    
   def rand_number(n, min, max)
     randoms = Array.new
     n.times do
