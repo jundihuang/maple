@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def show_articles_by_tag
     @tag = ActsAsTaggableOn::Tag.find_by(slug:params[:slug])
+    puts @tag
     @articles = Article.tagged_with(@tag.name).paginate(page: params[:page],per_page: 20).order("id DESC")
     render 'home/index'
   end
