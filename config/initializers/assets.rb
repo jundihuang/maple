@@ -13,7 +13,7 @@ Rails.application.config.assets.version = '1.0'
 
 layout_css = %w( css/bootstrap.min.css css/content.css css/navbar.css css/sidebar.css )
 layout_Javascript = %w( js/bootstrap.min.js js/jquery-1.11.3.min.js js/navbar/navbar.js )
-custom_css = %w(  )
+custom_css = %w( css/article.css )
 
 sumary_static_file = layout_css + layout_Javascript + custom_css
 
