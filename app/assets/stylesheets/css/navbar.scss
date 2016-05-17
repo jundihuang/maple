@@ -3,7 +3,7 @@ body{
 }
 
 .navbar{
-  background-color: rgba(256,256,256,0.7);
+   background-color: rgba(256,256,256,0.7);
 }
 
 .container-fluid .navbar-header{
@@ -11,8 +11,9 @@ body{
 }
 
 .navbar-nav>li>a{
-  font-size: 18px;
+  font-size: 15px;
   font-weight:bold;
+  border-radius: 7px;
 }
 
 .navbar-default .navbar-nav>li>a:hover{
