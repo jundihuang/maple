@@ -1,3 +1,5 @@
+$title-color: #CF4D35;
+
 .banner{
   background: white;
   box-shadow: 0px 3px 3px #E9E9E9;
@@ -17,12 +19,41 @@
   }
 }
 
-.pagination{
+div.pagination{
+    text-align: center;
+    height: auto;
   display: block;
   text-align: center;
   a{
   color: #CF4D35;
   }
+}
+
+ul.pagination {
+    li {
+	&.active {
+	    a {
+		background: $title-color;
+		border: 1px solid transparent;
+		&:hover {
+		    color: #fff;
+		    border: 1px solid transparent;
+		    background: $title-color;
+		}
+	    }
+	}
+	
+	a {
+	    border: 1px solid $title-color;
+	    &:hover {
+		color: #fff;
+		border: 1px solid transparent;
+		background: $title-color;
+	    }
+	}
+
+    }
+
 }
 
 .special-list{

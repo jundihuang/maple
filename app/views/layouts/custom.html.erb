@@ -6,7 +6,7 @@
     <title>Maple</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <%= stylesheet_link_tag "css/bootstrap.min.css", "css/content.css", "css/navbar.css", "css/sidebar.css" %>
+    <%= stylesheet_link_tag "css/bootstrap.min.css", "css/font-awesome.min.css", "css/content.css", "css/navbar.css", "css/sidebar.css", "css/footer.css" %>
     <%= yield :stylesheet %>
 
     <%= csrf_meta_tags %>
@@ -31,7 +31,7 @@
 
     </section>
 
-
+    <%= render "partials/footer" %>
     <%= javascript_include_tag "js/jquery-1.11.3.min.js", "js/bootstrap.min.js", "js/navbar/navbar.js" %>
     <%= yield :javascript %>
   </body>
