@@ -19,3 +19,9 @@
 /spring-1000/*
 # Ignore Emacs Backup
 *~
+
+
+
+# Ignore package bundle
+
+vendor/bundle/
