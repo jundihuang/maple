@@ -19,3 +19,7 @@
 /spring-1000/*
 # Ignore Emacs Backup
 *~
+
+
+# Mac Temp File
+.DS_Store
