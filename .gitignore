@@ -21,7 +21,9 @@
 *~
 
 
-
 # Ignore package bundle
-
 vendor/bundle/
+
+
+# Mac Temp File
+.DS_Store
