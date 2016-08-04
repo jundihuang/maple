@@ -14,13 +14,12 @@ class ArticlesControllerTest < ActionController::TestCase
   test "should get show" do
      get :show, id:@article
      assert_response :success
-     assert_select 'div.banner>h3', text: "Article"
-     assert_select 'h3.article-title', text: @article.title
+     assert_select 'div.banner>h3', text: @article.title
      if !@article.classification.nil? then
        assert_select 'h5.article-classification', text: "Classification: #{@article.title}"
      end
      assert_select 'div.article-content>p', text: @article.body
-     check_spescial_and_classification()
+     check_classification()
   end
 
   test "should show articles by tag" do
@@ -32,6 +31,6 @@ class ArticlesControllerTest < ActionController::TestCase
     articles.each do |article|
       assert_select 'a[href=?]', article_path(article), text: article.title
     end
-    check_spescial_and_classification()
+    check_classification()
   end
 end

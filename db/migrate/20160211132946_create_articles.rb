@@ -4,9 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :subtitle
       t.text :body
-      #t.references :special
       #t.references :classification
-      t.belongs_to :special
       t.belongs_to :classification
       t.timestamps null: false
     end

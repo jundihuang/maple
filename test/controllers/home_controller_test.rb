@@ -9,7 +9,7 @@ class HomeControllerTest < ActionController::TestCase
     first_page_of_articles.each do |article|
       assert_select 'a[href=?]', article_path(article), text: article.title
     end
-    check_spescial_and_classification()
+    check_classification()
   end
  
 end

@@ -16,6 +16,5 @@ article_<%= n%>:
   subtitle: testmysql
   body: myslql test,myslql testmyslql test,myslql testmyslql test,myslql testmyslql test,myslql testmyslql test,myslql test
   classification: clsone
-  special: speone
   tags: awesome, slick, hefty
 <% end %>
