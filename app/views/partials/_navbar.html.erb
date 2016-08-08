@@ -1,24 +1,9 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	<span class="sr-only">Toggle navigation</span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href = "<%= root_path %>">Maple Blog</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-	<!-- <li><a href="<%= root_path %>"><%=t :Home %></a></li> -->
-	<li><a href="#"><%=t :Picture %></a></li>
-	<li><a href="#"><%=t :Book %></a></li>
-      </ul>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+<nav id="navbar">
+  <img class="picture" src="https://avatars0.githubusercontent.com/u/10846369?v=3&s=400" />
+  <ul class="select">
+    <li><a href="<%= root_path %>">Home</a></li>
+    <li><a href="#">Book</a></li>
+    <li><a href="#">Pictrue</a></li>
+    <li><a href="#">Special</a></li>
+  </ul>
 </nav>

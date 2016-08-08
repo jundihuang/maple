@@ -1,28 +1,51 @@
-body{
-  background: #E8E8E8;
+li {
+    margin: 0px;
+    padding: 0px;
+}
+$image-width: 100px;
+$nav-min-height: 150px;
+$text-color: #CF4D35;
+
+#navbar {
+    font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+    background-image: url(../image/mayday.jpeg);
+    background-repeat: no-repeat;
+    background-position: 100% 12%;
+    box-shadow: 1px 3px 19px -4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    min-height: $nav-min-height;
 }
 
-.navbar{
-   background-color: rgba(256,256,256,0.7);
+.picture {
+    display: inline-block;
+    height: $image-width;
+    width: $image-width;
+    margin: $image-width / 5  auto;
+    border-radius: $image-width;
+    background: #fff;
 }
 
-.container-fluid .navbar-header{
-  margin-left: 40px;
-}
-
-.navbar-nav>li>a{
-  font-size: 15px;
-  font-weight:bold;
-  border-radius: 7px;
-}
-
-.navbar-default .navbar-nav>li>a:hover{
-  color: #CF4D35;
-  border-left: 1px solid #F0F0F0;
-  border-right: 1px solid #F0F0F0;
-  background: white;
-}
-
-.container{
-  margin-top: 50px;
+.select {
+    font-size: 23px;
+    li {
+	display: inline-block;
+	padding: 12px 0px;
+	margin-left: -7px;
+	list-style: none;
+	&:not(:first-child) > a{
+	    border-left: 2px solid #CEC5C5;
+	    border-top: 0px solid transparent;
+	    box-shadow: 1px 0px 2px -3px darken(#CEC5C5, 10%);
+	}
+	a {
+	    text-decoration: none;
+	    padding: 0px 30px;
+	    color: #63CEEF;
+	    &:hover,
+	    &:active{
+		text-shadow: 1px -1px 7px #000;
+		color: #CF4D35;
+	    }
+	}
+    }
 }
