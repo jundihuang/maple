@@ -1,20 +1,18 @@
-<div class="panel panel-default" id="article-list">
-  <div class="banner">
+<div id="article">
+  <div class="article-title">
     <h3><%= @article.title %></h3>
   </div>
-  <div class="panel-body article-list">
-    <h3 class="article-title"></h3>
-    <div class="article-info">
-      <h5 class="article-created">
+  <div class="article-info info-layout">
+    <h5>
 	<%= @article.created_at.strftime("%Y-%m-%d %H:%M") %>
-      </h5>
-      <% if !@article.classification.nil? %>
-      <h5 class="article-classification">
+    </h5>
+    <% if !@article.classification.nil? %>
+    <h5>
 	Classification: <%= @article.classification.title %>
-      </h5>
-      <% end %>
-      <% if !@article.tags.empty? %>
-      <h5 class="article-tag">
+    </h5>
+    <% end %>
+    <% if !@article.tags.empty? %>
+    <h5 class="article-tag">
 	Tag:
 	<% @article.tags.each do |tag| %>
 	<label class="label label-success">
@@ -22,11 +20,10 @@
           </a>
 	</label>
 	<% end %>
-      </h5>
-      <% end %>
+    </h5>
+    <% end %>
     </div>
-    <div class="article-content">
+  <div class="article-content">
       <%= @article_content %>
-    </div>
   </div>
 </div>

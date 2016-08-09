@@ -1,83 +1,75 @@
 $title-color: #CF4D35;
+$main-color: #25CCFF;
+// 先写在这里
 
-.banner{
-  background: white;
-  box-shadow: 0px 3px 3px #E9E9E9;
-  vertical-align: middle;
-  h3{
-  margin-top: 0px;
-  padding: 12px 0px;
-  text-align: center;
-  }
+body {
+  background-color: #F9F9F9;
 }
 
-.article-list h3 a{
-  color: #CF4D35;
-  text-decoration: none;
-  &:hover{
-  color: black;
-  }
+#page-container {
+  opacity: 0.88;
+  background-color: #fff;
+  width: 100%;
+  margin: 0px auto;
 }
 
-div.pagination{
-    text-align: center;
-    height: auto;
-  display: block;
-  text-align: center;
-  a{
-  color: #CF4D35;
-  }
-}
 
-ul.pagination {
-    li {
-	&.active {
-	    a {
-		background: $title-color;
-		border: 1px solid transparent;
-		&:hover {
-		    color: #fff;
-		    border: 1px solid transparent;
-		    background: $title-color;
-		}
-	    }
-	}
-	
-	a {
-	    border: 1px solid $title-color;
-	    &:hover {
-		color: #fff;
-		border: 1px solid transparent;
-		background: $title-color;
-	    }
-	}
-
-    }
-
-}
-
-.special-list{
-  .special-cube{
-  border: 1px solid black;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  }
-  a{
-  font-size: 40px;
-  color: #CF4d35;
-  text-decoration: none;   
-  &:hover{
-    color: black;
-    }
-  }
-} 
-
-.article-content{
-  padding: 30px 50px;
-}
-
-#article-list {
+#articles {
     min-height: 670px;
-    margin-top: 30px;
+    width: 70%;
+    margin: 60px auto;
+}
+
+.banner-divider {
+  width: 70%;
+  border-top-color: $main-color;
+  border-top-width: 3px;
+  border-top-style: solid;
+  margin: 10px auto;
+}
+
+#articles-banner {
+  text-align: center;
+  h3 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: monospace;
+  }
+}
+
+#articles-list {
+  margin-top: 5%;
+  ul {
+    li {
+      border-top: 1px solid #e7eaec;
+      padding-bottom: 4px;
+      padding-left: 70px;
+      list-style: none;
+      &:hover {
+        background-color: #EFEFEF;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.article-title {
+  font-size: 23px;
+  font-weight: 200;
+  a {
+    color: #2f4050;
+  }
+}
+
+.article-info {
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 3px;
+  width: 200;
+  color: darken(#e7eaec, 10%);
 }

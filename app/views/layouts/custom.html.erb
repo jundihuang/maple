@@ -12,26 +12,25 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render "partials/navbar" %>
-    <%= yield %>
+    <div id="page-container">
+      <%= render "partials/navbar" %>
+      <%= yield %>
 
-    <section class="container">
-      <section class="col-sm-9 page-content">
-	<%= yield :panel %>
-      </section>
+        <section id="articles-container">
+          <%= yield :panel %>
+        </section>
 
-      <aside class="col-sm-3 age-index">
-	<%= yield :classification %>
-      </aside>
+        <!-- <aside class="col-sm-3 age-index">
+  	<%= yield :classification %>
+        </aside>
 
 
-      <aside class="col-sm-3 tag-container">
-	<%= yield :tag %>
-      </aside>
+        <aside class="col-sm-3 tag-container">
+  	<%= yield :tag %>
+        </aside> -->
 
-    </section>
-
-    <%= render "partials/footer" %>
+      <%= render "partials/footer" %>
+    </div>
     <%= javascript_include_tag "js/jquery-1.11.3.min.js", "js/bootstrap.min.js", "js/navbar/navbar.js" %>
     <%= yield :javascript %>
   </body>

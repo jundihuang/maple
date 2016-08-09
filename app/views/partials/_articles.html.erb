@@ -1,21 +1,23 @@
-<div class="panel panel-default" id="article-list">
-  <div class="banner">
-    <h3><%=t "Lastest Chapter" %></h3>
+<div id="articles">
+  <div id="articles-banner">
+    <h3>
+      <div class="banner-divider"></div>
+      <%=t "Lastest Chapter" %>
+    </h3>
   </div>
-  <div class="panel-body article-list">
+  <div id="articles-list">
        <ul>
         <% if @articles.any? %>
           <% @articles.each do |article| %>
             <li>
-              <h3><%= link_to article.title, article_path(article) %></h3>
-              <p><%= article.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+              <h3 class="article-title"><%= link_to article.title, article_path(article) %></h3>
+              <p class="article-info"><%= article.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
           <% end %>
         <% else %>
             <h4><%=t "Content Not Exists" %></h4>
            </li>
         <% end %>
       </ul>
-    <%= will_paginate @articles %>
   </div>
+  <%= will_paginate @articles %>
 </div>
-

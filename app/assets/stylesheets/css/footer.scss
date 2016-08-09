@@ -1,53 +1,62 @@
 $footer-height: 150px;
-$icon-frame-size: 60px;
+$icon-frame-size: 45px;
 $title-color: #CF4D35;
 #page-footer {
     font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
     .container-fluid {
-	padding-top: 20px;
-	div:first-child {
-	    height: auto;
-	    text-align: center;
-	    h2 {
-		color: $title-color;
-	    }
-	    p {
-		color: #888;
-		padding: 12px;
-		font-size: 17px;
-		span {
-		    color: #63CEEF;
-		}
-		strong {
-		    color: #62C1FF;
-		}
-	    }
-	}
-	div:last-child {
-	    h2 {
-		color: $title-color;
-	    }
-	    a {
-		margin-left: 10px;
-		i {
-		    line-height: $icon-frame-size;
-		}
-		color: #000;
-		width: $icon-frame-size;
-		height: $icon-frame-size;
-		display: inline-block;
-		border: 2px solid #000;
-		border-radius: $icon-frame-size;
-		&:hover {
-		    text-decoration: none;
-		    color: #fff;
-		    border: 2px solid $title-color;
-		    background: $title-color;
-		}
-	    }
-	    text-align: center;
-	    height: $footer-height;
-	}
+      padding-top: 5px;
+      padding-bottom: 20px;
+      div:first-child {
+        height: auto;
+        h2 {
+          color: $title-color;
+        }
+        p {
+          color: #888;
+          padding: 12px 0;
+          font-size: 17px;
+          span {
+            color: #63CEEF;
+          }
+          strong {
+            color: #62C1FF;
+          }
+        }
+      }
+      div:last-child {
+        text-align: right;
+        h2 {
+          color: $title-color;
+        }
+      }
     }
 }
 
+.icon {
+  padding-top: 4px;
+  a {
+    margin-left: 10px;
+    text-align: center;
+    i {
+      line-height: $icon-frame-size;
+    }
+    color: #000;
+    width: $icon-frame-size;
+    height: $icon-frame-size;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: $icon-frame-size;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid $title-color;
+      background: $title-color;
+    }
+  }
+}
+
+.border-liner {
+  border-top: 4px groove rgba(108, 168, 241, 0.9);
+  margin: 5px auto;
+  width: 95%;
+}

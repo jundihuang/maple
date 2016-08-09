@@ -1,51 +1,108 @@
+$image-width: 100px;
+$nav-min-height: 450px;
+$text-color: #CF4D35;
+$main-color: #25CCFF;
+
+nav,
+ul {
+  padding: 0px;
+}
+
+.image-container {
+  text-align: center;
+}
+
 li {
     margin: 0px;
     padding: 0px;
 }
-$image-width: 100px;
-$nav-min-height: 150px;
-$text-color: #CF4D35;
 
 #navbar {
+    position: relative;
+    overflow: hidden;
     font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
-    background-image: url(../image/mayday.jpeg);
-    background-repeat: no-repeat;
-    background-position: 100% 12%;
     box-shadow: 1px 3px 19px -4px rgba(0, 0, 0, 0.8);
-    text-align: center;
-    min-height: $nav-min-height;
+    height: $nav-min-height;
+    .background {
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        width: 100%;
+        top: 0px;
+        height: auto;
+        left: 0px;
+    }
 }
 
-.picture {
-    display: inline-block;
-    height: $image-width;
-    width: $image-width;
-    margin: $image-width / 5  auto;
-    border-radius: $image-width;
-    background: #fff;
+// .picture {
+//   position: relative;
+//     display: inline-block;
+//     height: $image-width;
+//     width: $image-width;
+//     margin: $image-width / 5  auto;
+//     border-radius: $image-width;
+//     background: #fff;
+// }
+
+.name {
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  left: 10%;
+  font-size: 14px;
+  color: #fff;
+  border-style: solid;
+  font-weight: 700;
+  background: $main-color;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 13px 6px;
+  border-width: 1px;
+  border-color: transparent;
+  display: inline-block;
+  &:visited,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active {
+    text-decoration: none;
+    background: darken($main-color, 10%);
+    color: #fff;
+  }
+
 }
 
 .select {
-    font-size: 23px;
-    li {
-	display: inline-block;
-	padding: 12px 0px;
-	margin-left: -7px;
-	list-style: none;
-	&:not(:first-child) > a{
-	    border-left: 2px solid #CEC5C5;
-	    border-top: 0px solid transparent;
-	    box-shadow: 1px 0px 2px -3px darken(#CEC5C5, 10%);
-	}
-	a {
-	    text-decoration: none;
-	    padding: 0px 30px;
-	    color: #63CEEF;
+  top: 0px;
+  right: 10%;
+  position: absolute;;
+  font-size: 14px;
+  display: inline-block;
+  li {
+    display: inline-block;
+    list-style: none;
+    a {
+      text-transform: uppercase;
+      font-weight: 700;
+      display: inline-block;
+      text-decoration: none;
+	    padding: 20px 10px 1px 10px;
+      border-top-width: 6px;
+      border-top-color: transparent;
+      border-top-style: solid;
+	    color: #FFF;
 	    &:hover,
 	    &:active{
-		text-shadow: 1px -1px 7px #000;
-		color: #CF4D35;
+        color: #FFFFFF;
+        border-top-color: $main-color;
 	    }
-	}
     }
+  }
 }
+
+// .position-right {
+//   position: absolute;
+//   right: 0px;
+//   display: inline-block;
+// }
