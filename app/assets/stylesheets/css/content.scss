@@ -1,3 +1,4 @@
+$image-width: 100px;
 $title-color: #CF4D35;
 $main-color: #25CCFF;
 // 先写在这里
@@ -6,9 +7,13 @@ body {
   background-color: #F9F9F9;
 }
 
+#articles-container {
+  background: #FFFFFF;
+}
+
 #page-container {
   opacity: 0.88;
-  background-color: #fff;
+  background-color: #FFFFFF;
   width: 100%;
   margin: 0px auto;
 }
@@ -17,7 +22,7 @@ body {
 #articles {
     min-height: 670px;
     width: 70%;
-    margin: 60px auto;
+    margin: 0 auto;
 }
 
 .banner-divider {
@@ -47,7 +52,7 @@ body {
       padding-left: 70px;
       list-style: none;
       &:hover {
-        background-color: #EFEFEF;
+        background-color: darken(#FFFFFF, 3%);
       }
       a {
         &:hover {
@@ -62,7 +67,7 @@ body {
   font-size: 23px;
   font-weight: 200;
   a {
-    color: #2f4050;
+    color: #F7AD57;
   }
 }
 
@@ -70,6 +75,67 @@ body {
   font-size: 15px;
   font-weight: 300;
   padding-bottom: 3px;
-  width: 200;
-  color: darken(#e7eaec, 10%);
+  color: #2f4050;
+}
+
+
+div.pagination {
+  margin: 0px auto;
+  width: 100%;
+  text-align: center;
+}
+
+ul.pagination {
+  li {
+    a {
+      color: $main-color;
+      &:hover,
+      &:active {
+        color: darken($main-color, 10%);
+      }
+    }
+    &.active {
+      a {
+        border-color: transparent;
+        background-color: $main-color;
+        &:hover {
+          border-color: transparent;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+.picture {
+  position: relative;
+  display: inline-block;
+  height: $image-width;
+  width: $image-width;
+  margin: $image-width / 5  auto;
+  border-radius: $image-width;
+  // border: 1px solid #EFEFEF;
+  background: #fff;
+}
+
+.articles-categories {
+  font-size: 15px;
+  font-family: "黑体";
+  li {
+    padding: 14px 0px;
+    display: inline-block;
+    a {
+      color: #000;
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: $main-color;
+      }
+    }
+  }
+  li + li {
+    padding-left: 30px;
+  }
 }

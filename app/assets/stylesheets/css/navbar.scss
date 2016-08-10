@@ -1,4 +1,3 @@
-$image-width: 100px;
 $nav-min-height: 450px;
 $text-color: #CF4D35;
 $main-color: #25CCFF;
@@ -32,16 +31,6 @@ li {
         left: 0px;
     }
 }
-
-// .picture {
-//   position: relative;
-//     display: inline-block;
-//     height: $image-width;
-//     width: $image-width;
-//     margin: $image-width / 5  auto;
-//     border-radius: $image-width;
-//     background: #fff;
-// }
 
 .name {
   position: absolute;
@@ -100,9 +89,3 @@ li {
     }
   }
 }
-
-// .position-right {
-//   position: absolute;
-//   right: 0px;
-//   display: inline-block;
-// }

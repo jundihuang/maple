@@ -1,31 +1,41 @@
+$main-color: #25CCFF;
+
 #article {
+  width: 70%;
     margin-left: -3px;
-    min-height: 670px;
-    margin-top: 30px;
+    min-height: 860px;
+    margin: 20px auto;
 }
 
 .article-title {
+  text-align: center;
   h3 {
+    display: inline-block;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 100;
     font-family: monospace;
   }
 }
 
 .info-layout {
+  margin: 10px auto;
+  width: 90%;
   h5 {
-    display: inline-block;;
+    border-bottom: 1px solid $main-color;
+    display: inline-block;
+    font-family: fantasy;
     font-size: 15px;
-    font-weight: 100;
-    padding-bottom: 3px;
+    font-weight: 200;
+    color: black;
   }
   h5 + h5 {
-      margin-left: 12px;
+      margin-left: 5%;
   }
 }
 
 .article-content {
-  margin-top: 30px;
+  margin: 30px auto;
+  width: 90%;
   font-size: 15px;
   font-weight: 100;
 }
