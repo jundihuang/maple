@@ -5,21 +5,24 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: mysql2
   pool: 5
-  timeout: 5000
+  username: root
+  password: 2bhero
+  encoding: utf8
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: db/maple_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/maple_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  password: dong2048!
+  database: maple_production
